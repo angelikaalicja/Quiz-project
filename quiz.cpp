@@ -1,7 +1,7 @@
 #include "quiz.h"
 
 #include "question.h"
-#include "operating_functions.h"
+#include "operatingfunctions.h"
 
 
 Quiz::Quiz(const std::string& quizLevel)
@@ -17,7 +17,7 @@ std::ifstream* Quiz::open()
 
   if(s->good()==false)
   {
-     showOutput("Ups! Data file is missing!\n");
+     OperatingFunctions::showOutput("Ups! Data file is missing!\n");
      return nullptr;
   }
 
@@ -70,7 +70,7 @@ void Quiz::close(std::ifstream* s)
 
 void Quiz::play()
 {
-    showOutput("\nPlaying! Level: " + level + "\n");
+    OperatingFunctions::showOutput("\nPlaying! Level: " + level + "\n");
 
     result = 0;
     for (auto q : questions)
@@ -82,9 +82,9 @@ void Quiz::play()
 
 void Quiz::showResult()
 {
-    showOutput("\nResult: ");
-    showOutput(result);
-    showOutput("/");
-    showOutput(questions.size());
-    showOutput("\n");
+    OperatingFunctions::showOutput("\nResult: ");
+    OperatingFunctions::showOutput(result);
+    OperatingFunctions::showOutput("/");
+    OperatingFunctions::showOutput(questions.size());
+    OperatingFunctions::showOutput("\n");
 }

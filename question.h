@@ -1,6 +1,8 @@
 #ifndef QUESTION_H
 #define QUESTION_H
 
+#include <gtest/gtest_prod.h>
+
 #include<string>
 
 class Question
@@ -16,7 +18,11 @@ public:
     void ask();
     int getScore();
 
-//private:
+private:
+    FRIEND_TEST(Question, getScore_OK_1);
+    FRIEND_TEST(Question, getScore_OK_0);
+    FRIEND_TEST(Question, getScore_FAIL);
+    FRIEND_TEST(Question, getScore_FAIL_STRING);
     std::string question, a, b, c, d;
     std::string correctAnswer;
     std::string userAnswer;

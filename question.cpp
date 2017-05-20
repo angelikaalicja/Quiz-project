@@ -1,5 +1,5 @@
 #include "question.h"
-#include "operating_functions.h"
+#include "operatingfunctions.h"
 
 //#include <iostream>
 //#include <fstream>
@@ -43,15 +43,15 @@ void Question::setCorrectAnswer(std::string _correctAnswer)
 
 void Question::ask()
 {
-    showOutput("\n" + question + "\n" + a + "\n" + b + "\n" + c + "\n" + d + "\n");
+    OperatingFunctions::showOutput("\n" + question + "\n" + a + "\n" + b + "\n" + c + "\n" + d + "\n");
 
-    showOutput("\nPlease, type your choice: ");
-    userAnswer = getInput();
+    OperatingFunctions::showOutput("\nPlease, type your choice: ");
+    userAnswer = OperatingFunctions::getInput();
     std::transform(userAnswer.begin(), userAnswer.end(), userAnswer.begin(), tolower);
 
-    showOutput("Score: ");
-    showOutput(userAnswer == correctAnswer);
-    showOutput("/1\n");
+    OperatingFunctions::showOutput("Score: ");
+    OperatingFunctions::showOutput(userAnswer == correctAnswer);
+    OperatingFunctions::showOutput("/1\n");
 }
 
 int Question::getScore()

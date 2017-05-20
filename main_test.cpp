@@ -1,4 +1,4 @@
-#include "operating_functions.h"
+#include "operatingfunctions.h"
 #include "game.h"
 #include "question.h"
 #include "quiz.h"
@@ -12,7 +12,6 @@ int main(int argc, char **argv)
 	testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 }
-
 
 TEST(Question, getScore_OK_1)
 {

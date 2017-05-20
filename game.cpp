@@ -1,5 +1,5 @@
 #include "game.h"
-#include "operating_functions.h"
+#include "operatingfunctions.h"
 #include "quiz.h"
 
 #include <algorithm>
@@ -12,8 +12,8 @@ Game::Game()
 std::string Game::keepingPlaying()
 {
         std::string playAgain;
-        showOutput("Do you want to play again or at another level? y/n\n");
-        playAgain = getInput();
+        OperatingFunctions::showOutput("Do you want to play again or at another level? y/n\n");
+        playAgain = OperatingFunctions::getInput();
         std::transform(playAgain.begin(), playAgain.end(), playAgain.begin(),
                 tolower);
 
@@ -23,8 +23,8 @@ std::string Game::keepingPlaying()
 std::string Game::selectLevel()
 {
     std::string level;
-    showOutput("Select level: 1/2/3\n");
-    level = getInput();
+    OperatingFunctions::showOutput("Select level: 1/2/3\n");
+    level = OperatingFunctions::getInput();
     return level;
 }
 
@@ -40,7 +40,7 @@ void Game::play()
             level = selectLevel();
             if (level == "1" || level == "2" || level == "3")
                 break;
-            showOutput("Your choice is invalid. Choose 1, 2 or 3.\n");
+            OperatingFunctions::showOutput("Your choice is invalid. Choose 1, 2 or 3.\n");
         }
 
         if (level == "1" || level == "2" || level == "3")
@@ -59,13 +59,13 @@ void Game::play()
             playAgain = keepingPlaying();
             if (playAgain == "y" || playAgain == "n")
                 break;
-            showOutput("Your choice is invalid. Choose y or n.\n");
+            OperatingFunctions::showOutput("Your choice is invalid. Choose y or n.\n");
         }
 
         if (playAgain != "y")
         {
            keepPlaying = false;
-           showOutput("Gameover!\n");
+           OperatingFunctions::showOutput("Gameover!\n");
         }
     }
 }
