@@ -5,6 +5,7 @@
 //#include <fstream>
 #include <algorithm>
 
+
 Question::Question()
 {
 
@@ -45,7 +46,7 @@ void Question::ask()
     showOutput("\n" + question + "\n" + a + "\n" + b + "\n" + c + "\n" + d + "\n");
 
     showOutput("\nPlease, type your choice: ");
-    getInput(userAnswer);
+    userAnswer = getInput();
     std::transform(userAnswer.begin(), userAnswer.end(), userAnswer.begin(), tolower);
 
     showOutput("Score: ");

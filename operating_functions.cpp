@@ -4,9 +4,16 @@
 
 
 
-void getInput(std::string& var)
+// void getInput(std::string& var)
+// {
+// 	std::cin >> var;
+// }
+
+std::string getInput()
 {
+	std::string var;
 	std::cin >> var;
+	return var;
 }
 
 void showOutput(std::string stringToPrint)

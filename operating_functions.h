@@ -4,7 +4,8 @@
 #include <string>
 
 
-void getInput(std::string& something);
+//void getInput(std::string& something);
+std::string getInput();
 void showOutput(std::string stringToPrint);
 void showOutput(int intToPrint);
 

@@ -16,7 +16,7 @@ public:
     void ask();
     int getScore();
 
-private:
+//private:
     std::string question, a, b, c, d;
     std::string correctAnswer;
     std::string userAnswer;

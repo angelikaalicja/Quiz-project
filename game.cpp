@@ -13,7 +13,7 @@ std::string Game::keepingPlaying()
 {
         std::string playAgain;
         showOutput("Do you want to play again or at another level? y/n\n");
-        getInput(playAgain);
+        playAgain = getInput();
         std::transform(playAgain.begin(), playAgain.end(), playAgain.begin(),
                 tolower);
 
@@ -24,7 +24,7 @@ std::string Game::selectLevel()
 {
     std::string level;
     showOutput("Select level: 1/2/3\n");
-    getInput(level);
+    level = getInput();
     return level;
 }
 
