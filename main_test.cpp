@@ -3,6 +3,7 @@
 #include "question.h"
 #include "quiz.h"
 #include <gtest/gtest.h>
+#include <gmock/gmock.h>
 
 #include <string>
 
