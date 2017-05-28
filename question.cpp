@@ -1,8 +1,6 @@
 #include "question.h"
 #include "operatingfunctions.h"
 
-//#include <iostream>
-//#include <fstream>
 #include <algorithm>
 
 
