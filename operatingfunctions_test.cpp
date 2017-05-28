@@ -7,12 +7,13 @@ OperatingFunctions::OperatingFunctions()
 
 }
 
+std::string globalReturn;
+
 std::string OperatingFunctions::getInput()
 {
-	std::string var;
-	std::cin >> var;
-	return var;
+	return globalReturn;
 }
+
 
 void OperatingFunctions::showOutput(const std::string& stringToPrint)
 {

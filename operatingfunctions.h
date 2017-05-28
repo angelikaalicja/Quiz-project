@@ -7,10 +7,9 @@ class OperatingFunctions
 {
 public:
     OperatingFunctions();
-    //void getInput(std::string& something);
     static std::string getInput();
-    static void showOutput(std::string stringToPrint);
-    static void showOutput(int intToPrint);
+    static void showOutput(const std::string& stringToPrint);
+    static void showOutput(const int& intToPrint);
 };
 
 #endif // OPERATINGFUNCTIONS_H

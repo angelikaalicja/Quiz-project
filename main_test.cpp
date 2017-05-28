@@ -3,9 +3,11 @@
 #include "question.h"
 #include "quiz.h"
 #include <gtest/gtest.h>
-#include <gmock/gmock.h>
+// #include <gmock/gmock.h>
 
 #include <string>
+
+extern std::string globalReturn;
 
 int main(int argc, char **argv)
 {
@@ -43,4 +45,11 @@ TEST(Question, getScore_FAIL_STRING)
 	q.correctAnswer = "a";
 	q.userAnswer = "aa";
 	EXPECT_EQ(0, q.getScore());
+}
+
+TEST(Game, selectLevel_OK)
+{
+	Game g;
+	globalReturn = "1";
+	EXPECT_EQ(globalReturn, g.selectLevel());
 }

@@ -8,5 +8,5 @@ add_definitions(-std=c++11)
 
 	enable_testing()
 	find_package(GTest REQUIRED)
-	add_executable(Quiz_test main_test.cpp operatingfunctions.cpp question.cpp quiz.cpp)
+	add_executable(Quiz_test main_test.cpp game.cpp operatingfunctions_test.cpp question.cpp quiz.cpp)
 	target_link_libraries(Quiz_test ${GTEST_BOTH_LIBRARIES} pthread)
